@@ -1,5 +1,5 @@
 from azdashboard.app.controllers.assets_controller import AssetsController
-from azdashboard.app.controllers.index_controller import IndexController
+from azdashboard.app.controllers.queue_controller import QueueController
 
 
 def setup_routing(app):
@@ -11,4 +11,5 @@ def setup_routing(app):
     app.route('/favicon.png', 'GET', AssetsController.favicon)
 
     # home
-    app.route('/', 'GET', IndexController().index)
+    app.route('/', 'GET', QueueController().all)
+    app.route('/<queue_name>', 'GET', QueueController().get_queue)
