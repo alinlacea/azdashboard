@@ -3,3 +3,6 @@ bottle>=0.12.9
 bottle-sqlalchemy>=0.4.3
 invoke>=0.12.2
 SQLAlchemy>=1.0.12
+CherryPy>=6.2.0
+azure>=1.0.3
+
